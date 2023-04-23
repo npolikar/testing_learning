@@ -18,6 +18,6 @@ def browser(request):
         browser = webdriver.Chrome()
     else:
         raise pytest.UsageError(f"--language should be in {languages_list}")
-    yield browser, browser_language
+    yield browser #, browser_language
     print("\nquit browser..")
     browser.quit()
